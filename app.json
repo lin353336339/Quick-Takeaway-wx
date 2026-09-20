@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/commodity/commodity",
+    "pages/index/index",
+    "pages/shopping/cart",
+    "pages/shopping/shopping",
+    "pages/my/my",
+    "pages/order/index",
+    "pages/details/index",
+    "pages/pay/index",
+    "pages/success/index",
+    "pages/nonet/index",
+    "pages/address/address",
+    "pages/remark/index",
+    "pages/addOrEditAddress/addOrEditAddress",
+    "pages/historyOrder/historyOrder"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "快快达外卖",
+    "navigationBarBackgroundColor": "#ffc200",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#E95F3C",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/commodity/commodity",
+        "text": "商品"
+      },
+      {
+        "pagePath": "pages/shopping/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

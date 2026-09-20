@@ -1,0 +1,119 @@
+.menu-scroll-view {
+  width: 180rpx;
+  height: 100%;
+}
+
+.type_item {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.type_item.active {
+  background-color: #fff;
+  color: #FFC200;
+  font-weight: bold;
+  position: relative;
+}
+
+.type_item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rpx;
+  height: 30rpx;
+  background-color: #FFC200;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item.allLine {
+  white-space: normal;
+  line-height: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seize_seat {
+  height: 200rpx;
+}
+
+/* 自定义分类组件样式 */
+.category-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 160rpx;
+  background-color: #f8f8f8;
+}
+
+.category-list {
+  height: 100%;
+  width: 100%;
+}
+
+.category-item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10rpx 0;
+  position: relative;
+  padding: 0 10rpx;
+  color: #666;
+  font-weight: 400;
+}
+
+.item-name {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s;
+  font-size: 26rpx;
+  max-width: 140rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.category-item.active {
+  color: #ffc200;
+  position: relative;
+  font-weight: 600;
+}
+
+.category-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rpx;
+  height: 36rpx;
+  background-color: #ffc200;
+  border-radius: 0 6rpx 6rpx 0;
+}
+
+.category-item.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 0 30rpx 30rpx 0;
+} 

@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "快快达外卖",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-bar": "/pages/common/Navbar/navbar",
+    "phone": "/components/uni-phone/index"
+  }
+}

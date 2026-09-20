@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <text class="title">购物车</text>
+  </view>
+  
+  <view class="test-content">
+    <text class="test-text">购物车测试内容 - 显示成功！</text>
+  </view>
+  
+  <view wx:if="{{cartList.length > 0}}" class="has-items">
+    <text>购物车有{{cartList.length}}件商品</text>
+  </view>
+  
+  <view wx:else class="empty-cart">
+    <image class="empty-icon" src="../../static/no_order.png"></image>
+    <text class="empty-text">购物车空空如也，去选购商品吧</text>
+    <navigator url="/pages/commodity/commodity" open-type="switchTab">
+      <view class="go-shopping-btn">去购物</view>
+    </navigator>
+  </view>
+</view> 

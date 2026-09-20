@@ -1,0 +1,13 @@
+<!-- 自定义分类组件 -->
+<view class="category-container">
+  <scroll-view scroll-y="true" class="category-list">
+    <view 
+      wx:for="{{categories}}" 
+      wx:key="id" 
+      class="category-item {{typeIndex === index ? 'active' : ''}}"
+      data-index="{{index}}"
+      bindtap="onCategoryTap">
+      <view class="item-name">{{item.name}}</view>
+    </view>
+  </scroll-view>
+</view> 

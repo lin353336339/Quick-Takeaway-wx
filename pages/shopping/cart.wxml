@@ -1,0 +1,49 @@
+<view class="cart-container">
+  <view class="header">
+    <text class="title">我的购物车</text>
+    <view class="clear-btn" bindtap="clearCart" wx:if="{{cartItems.length > 0}}">清空</view>
+  </view>
+  
+  <block wx:if="{{cartItems.length > 0}}">
+    <view class="cart-content">
+      <view wx:for="{{cartItems}}" wx:key="id" class="cart-item">
+        <view class="item-info">
+          <image class="item-image" src="{{item.image || '../../static/no_order.png'}}" mode="aspectFill"></image>
+          <view class="item-details">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-flavor" wx:if="{{item.flavor}}">{{item.flavor}}</text>
+            <text class="item-price">¥{{item.price}}</text>
+          </view>
+          <view class="delete-btn" bindtap="deleteCartItem" data-id="{{item.id}}">
+            <text class="delete-icon">×</text>
+          </view>
+        </view>
+        <view class="item-controls">
+          <text class="btn-minus" bindtap="decreaseQuantity" data-id="{{item.id}}">-</text>
+          <text class="item-quantity">{{item.quantity}}</text>
+          <text class="btn-plus" bindtap="increaseQuantity" data-id="{{item.id}}">+</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="cart-footer">
+      <view class="total-info">
+        <text class="total-label">合计:</text>
+        <text class="total-price">¥{{totalPrice}}</text>
+      </view>
+      <view class="checkout-btn" bindtap="checkout">去结算</view>
+    </view>
+  </block>
+  
+  <view class="empty-cart" wx:else>
+    <image class="empty-icon" src="../../static/no_order.png"></image>
+    <text class="empty-text">购物车空空如也，去选购商品吧</text>
+    <navigator url="/pages/commodity/commodity" open-type="switchTab">
+      <view class="go-shopping-btn">去购物</view>
+    </navigator>
+  </view>
+  
+  <view class="loading" wx:if="{{loading}}">
+    <view class="loader"></view>
+  </view>
+</view>

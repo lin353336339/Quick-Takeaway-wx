@@ -1,0 +1,10 @@
+<scroll-view class="u-tab-view menu-scroll-view" scroll-y="{{true}}" scroll-with-animation="{{true}}">
+  <block wx:for="{{categories}}" wx:key="index">
+    <view class="type_item {{typeIndex==index?'active':''}}" 
+          data-index="{{index}}"
+          bindtap="onCategoryTap">
+      <view class="item {{item.name.length>5?'allLine':''}}">{{item.name}}</view>
+    </view>
+  </block>
+  <view class="seize_seat"></view>
+</scroll-view> 
